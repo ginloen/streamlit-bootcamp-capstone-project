@@ -1,6 +1,9 @@
 import streamlit as st
 import json
 from helper_function import applicant_query_handler
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 from utility import check_password
 

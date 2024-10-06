@@ -2,6 +2,9 @@
 import os
 from dotenv import load_dotenv
 import lolviz
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 # Import the key CrewAI classes
 from crewai import Agent, Task, Crew
